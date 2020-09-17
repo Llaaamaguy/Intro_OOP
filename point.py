@@ -51,7 +51,9 @@ def main():
 
     p12 = Point(1.0, 1.0)
     p22 = Point(4.0, 5.0)
-    print('The length of this rectangle is {}'.format(length(), p12.y, p22.y))
+    rect = Rectangle(p12, p22)
+    print('The area of this rectangle is {}'.format(rect.area()))
+    print('The perimiter of this rectangle is {}'.format(rect.perimiter()))
 
 if __name__ == "__main__":
     main()
