@@ -18,40 +18,39 @@ class Point:
         return sqrt(self.x**2 + self.y**2)
 
 class Rectangle:
-    x = 0.0
-    y = 0.0
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
     
-    def length(self, p, p2):
-        return (p2[2] - p[2]) 
+    def length(self):
+        return (p2.y - p1.y)
 
-    def width(self, p, p2):
-        return (p2[1] - p[1])
-
-    def area(self, p, p2):
-        l = length(p, p2)
-        w = width(p, p2)
-
+    def width(self):
+        return (p2.x - p1.x)
+    
+    def area(self):
+        l = self.length()
+        w = self.width()
         return (l*w)
-
-    def perimiter(self, p, p2):
-        l = length(p, p2)
-        w = width(p, p2)
+    
+    def perimiter(self):
+        l = self.length()
+        w = self.width()
 
         return ((2*l)+(2*w))
-        
- 
 
 def main():
+    '''
     p12 = Point(3.0, 4.0)
     print("The point ({}, {}) is at a distance of {} from the origin.".format(p1.x, p1.y, p1.abs()))
 
     p22 = Point(-1.0, 6.5)
     print("It is a distance {:.5} away from the point ({}, {}).".format(p1.dist_to(p2), p2.x, p2.y))
+    '''
 
+    p12 = Rectangle((1.0, 1.0), (4.0, 5.0))
+    print('The length of this rectangle is {}'.format(p12.length()))
 
 if __name__ == "__main__":
     main()
