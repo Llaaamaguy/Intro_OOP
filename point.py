@@ -24,10 +24,10 @@ class Rectangle:
         self.p2 = p2
     
     def length(self):
-        return (p2.y - p1.y)
+        return (self.p2.y - self.p1.y)
 
     def width(self):
-        return (p2.x - p1.x)
+        return (self.p2.x - self.p1.x)
     
     def area(self):
         l = self.length()
@@ -49,8 +49,9 @@ def main():
     print("It is a distance {:.5} away from the point ({}, {}).".format(p1.dist_to(p2), p2.x, p2.y))
     '''
 
-    p12 = Rectangle((1.0, 1.0), (4.0, 5.0))
-    print('The length of this rectangle is {}'.format(p12.length()))
+    p12 = Point(1.0, 1.0)
+    p22 = Point(4.0, 5.0)
+    print('The length of this rectangle is {}'.format(length(), p12.y, p22.y))
 
 if __name__ == "__main__":
     main()
