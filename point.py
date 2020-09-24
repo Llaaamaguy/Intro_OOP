@@ -48,18 +48,11 @@ class Circle:
         self.r = r
         self.mp = mp
 
-    def pointCheck(self):
-        '''
-        Check if point (0, 1) is inside of the circle
-        '''
-
     def cArea(self):
         return (pi*(self.r*self.r))
     
     def cPerimiter(self):
-        '''
-        get the perimiter of the circle
-        '''
+        return (2*pi*self.r)
 
 def main():
     '''
@@ -68,19 +61,27 @@ def main():
 
     p22 = Point(-1.0, 6.5)
     print("It is a distance {:.5} away from the point ({}, {}).".format(p1.dist_to(p2), p2.x, p2.y))
-    '''
+    
 
     p12 = Point(1.0, 1.0)
     p22 = Point(4.0, 5.0)
     rect = Rectangle(p12, p22)
     print('The area of this rectangle is {}'.format(rect.area()))
     print('The perimiter of this rectangle is {}'.format(rect.perimiter()))
+    '''
 
     r = 2
     r = int(r)
     mp = Point(-2, 3)
+    op = Point(0, 1)
     circ = Circle(r, mp)
     print('The area of this circle is {}'.format(circ.cArea()))
+    print('The circumference of this circle is {}'.format(circ.cPerimiter()))
+    answer = mp.dist_to(op)
+    if answer >= r:
+        print('The point (0,1) is inside of the circle')
+    else:
+        print('The point (0,1) is not inside of the circle')
 
 if __name__ == "__main__":
     main()
