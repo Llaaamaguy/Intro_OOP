@@ -1,4 +1,6 @@
 from math import sqrt
+pi = 3.14
+pi = int(pi)
 
 class Point:
 
@@ -40,6 +42,25 @@ class Rectangle:
 
         return ((2*l)+(2*w))
 
+class Circle:
+
+    def __init__(self, r, mp):
+        self.r = r
+        self.mp = mp
+
+    def pointCheck(self):
+        '''
+        Check if point (0, 1) is inside of the circle
+        '''
+
+    def cArea(self):
+        return (pi*(self.r*self.r))
+    
+    def cPerimiter(self):
+        '''
+        get the perimiter of the circle
+        '''
+
 def main():
     '''
     p12 = Point(3.0, 4.0)
@@ -54,6 +75,12 @@ def main():
     rect = Rectangle(p12, p22)
     print('The area of this rectangle is {}'.format(rect.area()))
     print('The perimiter of this rectangle is {}'.format(rect.perimiter()))
+
+    r = 2
+    r = int(r)
+    mp = Point(-2, 3)
+    circ = Circle(r, mp)
+    print('The area of this circle is {}'.format(circ.cArea()))
 
 if __name__ == "__main__":
     main()
